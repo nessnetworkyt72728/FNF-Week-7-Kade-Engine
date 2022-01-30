@@ -177,7 +177,7 @@ class Character extends FlxSprite
 
 				playAnim('Idle
 
-			case 'mom-car':
+			case 'mom-car':,
 				tex = Paths.getSparrowAtlas('characters/momCar');
 				frames = tex;
 
