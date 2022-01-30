@@ -158,23 +158,23 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -50, -130);
 
 				playAnim('danceRight');
-			case 'mom':
-				tex = Paths.getSparrowAtlas('characters/Mom_Assets');
+			case 'dorkly':
+				tex = Paths.getSparrowAtlas('characters/dorkly_assets');
 				frames = tex;
 
-				animation.addByPrefix('idle', "Mom Idle", 24, false);
-				animation.addByPrefix('singUP', "Mom Up Pose", 24, false);
-				animation.addByPrefix('singDOWN', "MOM DOWN POSE", 24, false);
-				animation.addByPrefix('singLEFT', 'Mom Left Pose', 24, false);
+				animation.addByPrefix('idle', "dorkly Idle", 24, false);
+				animation.addByPrefix('singUP', "dorkly up", 24, false);
+				animation.addByPrefix('singDOWN', "dorkly down", 24, false);
+				animation.addByPrefix('singLEFT', 'dorkly right', 24, false);
 				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
 				// CUZ DAVE IS DUMB!
-				animation.addByPrefix('singRIGHT', 'Mom Pose Left', 24, false);
+				animation.addByPrefix('singRIGHT', 'dorkly left', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", 14, 71);
-				addOffset("singRIGHT", 10, -60);
-				addOffset("singLEFT", 250, -23);
-				addOffset("singDOWN", 20, -160);
+				addOffset("singUP", 16, 45);
+				addOffset("singRIGHT", 67, -27);
+				addOffset("singLEFT", 29, -6);
+				addOffset("singDOWN", 55, -16);
 
 				playAnim('idle');
 
@@ -498,6 +498,25 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+
+			case 'tankman':
+				tex = Paths.getSparrowAtlas('characters/tankmanCaptain');
+				frames = tex;
+
+				animation.addByPrefix('idle', "Tankman Idle Dance instance", 24, false);
+				animation.addByPrefix('singUP', "Tankman UP note instance", 24, false);
+				animation.addByPrefix('singDOWN', "Tankman DOWN note instance", 24, false);
+				animation.addByPrefix('singLEFT', 'Tankman Left note instance', 24, false);
+				animation.addByPrefix('singRIGHT', 'Tankman Right note instance', 24, false);
+
+				addOffset('idle');
+				addOffset("singUP", 24, 56);
+				addOffset("singRIGHT", -1, -7);
+				addOffset("singLEFT", 100 -14);
+				addOffset("singDOWN", 98, -90);
+
+				playAnim('idle');
+
 		}
 
 		dance();
