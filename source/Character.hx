@@ -158,7 +158,7 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -50, -130);
 
 				playAnim('danceRight');
-			case 'mom':
+			case 'tankman':
 				tex = Paths.getSparrowAtlas('characters/tankmanCaptain');
 				frames = tex;
 
