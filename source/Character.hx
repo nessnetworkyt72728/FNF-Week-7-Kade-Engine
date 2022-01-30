@@ -158,26 +158,25 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -50, -130);
 
 				playAnim('danceRight');
-
-			case 'tankman':
+			case 'mom':
 				tex = Paths.getSparrowAtlas('characters/tankmanCaptain');
 				frames = tex;
 
 				animation.addByPrefix('idle', "Tankman Idle Dance instance", 24, false);
 				animation.addByPrefix('singUP', "Tankman UP note instance", 24, false);
-				animation.addByPrefix('singDOWN', "Tankman DOWN note instance", 24, false);
-				animation.addByPrefix('singLEFT', 'Tankman Left note instance', 24, false);
-				animation.addByPrefix('singRIGHT', 'Tankman Right note instance', 24, false);
+				animation.addByPrefix('singDOWN', "Tankman Down note instance", 24, false);
+				animation.addByPrefix('singLEFT', 'Tankman Right note instance', 24, false);
+				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
+				// CUZ DAVE IS DUMB!
+				animation.addByPrefix('singRIGHT', 'Tankman Left note instance', 24, false);
 
 				addOffset('idle');
 				addOffset("singUP", 24, 56);
 				addOffset("singRIGHT", -1, -7);
-				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
-				// CUZ DAVE IS DUMB!
 				addOffset("singLEFT", 100 -14);
-				addOffset("singDOWN", 98, -90);
+				addOffset("singDOWN", 
 
-				playAnim('Idle
+				playAnim('idle');
 
 			case 'mom-car':
 				tex = Paths.getSparrowAtlas('characters/momCar');
