@@ -172,12 +172,14 @@ class Character extends FlxSprite
 				addOffset('idle');
 				addOffset("singUP", 24, 56);
 				addOffset("singRIGHT", -1, -7);
+				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
+				// CUZ DAVE IS DUMB!
 				addOffset("singLEFT", 100 -14);
 				addOffset("singDOWN", 98, -90);
 
 				playAnim('Idle
 
-			case 'mom-car':,
+			case 'mom-car':
 				tex = Paths.getSparrowAtlas('characters/momCar');
 				frames = tex;
 
