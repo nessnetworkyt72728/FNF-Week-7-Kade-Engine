@@ -158,25 +158,24 @@ class Character extends FlxSprite
 				addOffset("singDOWN", -50, -130);
 
 				playAnim('danceRight');
-			case 'dorkly':
-				tex = Paths.getSparrowAtlas('characters/dorkly_assets');
+
+			case 'tankman':
+				tex = Paths.getSparrowAtlas('characters/tankmanCaptain');
 				frames = tex;
 
-				animation.addByPrefix('idle', "dorkly Idle", 24, false);
-				animation.addByPrefix('singUP', "dorkly up", 24, false);
-				animation.addByPrefix('singDOWN', "dorkly down", 24, false);
-				animation.addByPrefix('singLEFT', 'dorkly right', 24, false);
-				// ANIMATION IS CALLED MOM LEFT POSE BUT ITS FOR THE RIGHT
-				// CUZ DAVE IS DUMB!
-				animation.addByPrefix('singRIGHT', 'dorkly left', 24, false);
+				animation.addByPrefix('idle', "Tankman Idle Dance instance", 24, false);
+				animation.addByPrefix('singUP', "Tankman UP note instance", 24, false);
+				animation.addByPrefix('singDOWN', "Tankman DOWN note instance", 24, false);
+				animation.addByPrefix('singLEFT', 'Tankman Left note instance', 24, false);
+				animation.addByPrefix('singRIGHT', 'Tankman Right note instance', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP", 16, 45);
-				addOffset("singRIGHT", 67, -27);
-				addOffset("singLEFT", 29, -6);
-				addOffset("singDOWN", 55, -16);
+				addOffset("singUP", 24, 56);
+				addOffset("singRIGHT", -1, -7);
+				addOffset("singLEFT", 100 -14);
+				addOffset("singDOWN", 98, -90);
 
-				playAnim('idle');
+				playAnim('idle
 
 			case 'mom-car':
 				tex = Paths.getSparrowAtlas('characters/momCar');
@@ -499,23 +498,37 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-			case 'tankman':
-				tex = Paths.getSparrowAtlas('characters/tankmanCaptain');
+			case 'gf':
+				// GIRLFRIEND CODE
+				tex = Paths.getSparrowAtlas('characters/GF_assets');
 				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByPrefix('singLEFT', 'GF left note', 24, false);
+				animation.addByPrefix('singRIGHT', 'GF Right Note', 24, false);
+				animation.addByPrefix('singUP', 'GF Up Note', 24, false);
+				animation.addByPrefix('singDOWN', 'GF Down Note', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByIndices('hairBlow', "GF Dancing Beat Hair blowing", [0, 1, 2, 3], "", 24);
+				animation.addByIndices('hairFall', "GF Dancing Beat Hair Landing", [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "", 24, false);
+				animation.addByPrefix('scared', 'GF FEAR', 24);
 
-				animation.addByPrefix('idle', "Tankman Idle Dance instance", 24, false);
-				animation.addByPrefix('singUP', "Tankman UP note instance", 24, false);
-				animation.addByPrefix('singDOWN', "Tankman DOWN note instance", 24, false);
-				animation.addByPrefix('singLEFT', 'Tankman Left note instance', 24, false);
-				animation.addByPrefix('singRIGHT', 'Tankman Right note instance', 24, false);
+				addOffset('cheer');
+				addOffset('sad', -2, -2);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
 
-				addOffset('idle');
-				addOffset("singUP", 24, 56);
-				addOffset("singRIGHT", -1, -7);
-				addOffset("singLEFT", 100 -14);
-				addOffset("singDOWN", 98, -90);
+				addOffset("singUP", 0, 4);
+				addOffset("singRIGHT", 0, -20);
+				addOffset("singLEFT", 0, -19);
+				addOffset("singDOWN", 0, -20);
+				addOffset('hairBlow', 45, -8);
+				addOffset('hairFall', 0, -9);
 
-				playAnim('idle');
+				addOffset('scared', -2, -17);
+
+				playAnim('danceRight');
 
 		}
 
